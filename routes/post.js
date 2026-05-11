@@ -19,10 +19,11 @@ router.put(
 // router.get("/", isAuth, postController.getPosts);
 router.get("/", postController.getPosts);
 
-router.get("/:id", isAuth, idValidator, validate, postController.getPost);
+// router.get("/:id", isAuth, idValidator, validate, postController.getPost);
+router.get("/:id", postController.getPost);
 
-// router.delete("/:id", isAuth, idValidator, validate, postController.deletePost);
-router.delete("/:id", postController.deletePost);
+router.delete("/:id", isAuth, idValidator, validate, postController.deletePost);
+// router.delete("/:id", postController.deletePost);
 
 module.exports = router;
 
