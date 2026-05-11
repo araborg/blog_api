@@ -53,5 +53,19 @@ Install another aws sdk:
 npm i @aws-sdk/s3-request-presigner
 
 
+curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWNiOTY3NGYzMmJlNjU4NTUxNTYwMDgiLCJuYW1lIjoiYXJhYm9yZyIsImVtYWlsIjoiYXJhYmFiczIwMTVAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzc4NTMxMjY2LCJleHAiOjE3NzkxMzYwNjZ9.dVIMdlGs_wzGFtelm5i2A9Fudx3y5monZFlb9HUz93E" https://onrender.com
+
+
+fetch('https://onrender.com', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWNiOTY3NGYzMmJlNjU4NTUxNTYwMDgiLCJuYW1lIjoiYXJhYm9yZyIsImVtYWlsIjoiYXJhYmFiczIwMTVAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzc4NTMxMjY2LCJleHAiOjE3NzkxMzYwNjZ9.dVIMdlGs_wzGFtelm5i2A9Fudx3y5monZFlb9HUz93E',
+    'Content-Type': 'application/json'
+  }
+})
+.then(res => res.json())
+.then(data => console.log(data))
+.catch(err => console.error(err));
+
 
 */

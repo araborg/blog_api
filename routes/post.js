@@ -16,7 +16,8 @@ router.put(
 	postController.updatePost,
 );
 
-router.get("/", isAuth, postController.getPosts);
+// router.get("/", isAuth, postController.getPosts);
+router.get("/", postController.getPosts);
 
 router.get("/:id", isAuth, idValidator, validate, postController.getPost);
 
