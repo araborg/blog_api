@@ -16,15 +16,15 @@ router.put(
 	postController.updatePost,
 );
 
-// router.get("/", isAuth, postController.getPosts);
-router.get("/", postController.getPosts);
+router.get("/", isAuth, postController.getPosts);
+// router.get("/", postController.getPosts);
 
-// router.get("/:id", isAuth, idValidator, validate, postController.getPost);
-router.get("/:id", postController.getPost);
+router.get("/:id", isAuth, idValidator, validate, postController.getPost);
+// router.get("/:id", postController.getPost);
 
 router.delete("/:id", isAuth, idValidator, validate, postController.deletePost);
 // router.delete("/:id", postController.deletePost);
 
 module.exports = router;
 
-// api/v1/posts?category=69cb982d7e704a80af638bd8
+// https://blog-api-ikk0.onrender.com/api/v1/posts
